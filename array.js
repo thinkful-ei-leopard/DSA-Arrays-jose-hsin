@@ -88,11 +88,28 @@ function main2() {
     console.log(arr2)
 }
 
-main()
-main2()
+// main()
+// main2()
 
+
+
+// drill 5
 function urlify(string) {
     return encodeURI(string)
 }
 
-console.log(urlify('www.thinkful.com /tauh ida parv een'))
+// console.log(urlify('www.thinkful.com /tauh ida parv een'))
+
+function reducer(array) {
+    let newArr = []
+
+    for(let i = 0; i <= array.length; i++) {
+        if(array[i] >= 5) {
+            newArr.push(array[i])
+        }
+    }
+
+    return newArr
+}
+
+// console.log(reducer([1,10,7,6,4,3]))
