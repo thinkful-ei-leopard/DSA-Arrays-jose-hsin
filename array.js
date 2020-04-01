@@ -127,4 +127,22 @@ function merge(array1, array2) {
     return [...array1, ...array2].sort((a, b) => a-b)
 }
 
-console.log(merge([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
+// console.log(merge([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
+
+
+//drill 9
+
+function replaceString(string, chars) {
+    let newString = string
+
+    for(let i = 0; i < string.length; i++) {
+        for(let j = 0; j < chars.length; j++) {
+            if(string[i] === chars[j]) {
+                newString = newString.replace(string[i], '')
+            }
+        }
+    }
+    return newString
+}
+
+console.log(replaceString('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
