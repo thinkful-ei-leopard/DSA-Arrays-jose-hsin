@@ -113,3 +113,11 @@ function reducer(array) {
 }
 
 // console.log(reducer([1,10,7,6,4,3]))
+
+
+// drill 7
+function maxSum(array) {
+    return array.reduce((a, b) => a+b)
+}
+
+// console.log(maxSum([4,6,-3,5,-2,1]))
