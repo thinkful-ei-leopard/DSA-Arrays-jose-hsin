@@ -121,3 +121,10 @@ function maxSum(array) {
 }
 
 // console.log(maxSum([4,6,-3,5,-2,1]))
+
+// drill 8
+function merge(array1, array2) {
+    return [...array1, ...array2].sort((a, b) => a-b)
+}
+
+console.log(merge([1, 3, 6, 8, 11], [2, 3, 5, 8, 9, 10]))
