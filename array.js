@@ -95,10 +95,20 @@ function main2() {
 
 // drill 5
 function urlify(string) {
-    return encodeURI(string)
+    let newString = ''
+
+    for(let i = 0; i < string.length; i++) {
+        if(string[i] === ' ') {
+            newString += '%20'
+        } else {
+        newString += string[i]
+        }
+    }
+
+    return newString
 }
 
-// console.log(urlify('www.thinkful.com /tauh ida parv een'))
+console.log(urlify('www.thinkful.com /tauh ida parv een'))
 
 function reducer(array) {
     let newArr = []
@@ -131,6 +141,7 @@ function merge(array1, array2) {
 
 
 //drill 9
+// O(n^2)
 
 function replaceString(string, chars) {
     let newString = string
@@ -145,4 +156,20 @@ function replaceString(string, chars) {
     return newString
 }
 
-console.log(replaceString('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+// console.log(replaceString('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+
+
+// drill 10
+function product(array) {
+    let newArr = []
+    let sum = 0
+
+    for(let i = 0; i < array.length; i++) {
+        sum = array.reduce((a, b) => a*b) / array[i]
+        newArr.push(sum)
+    }
+
+    return newArr
+}
+
+// console.log(product([1, 3, 9, 4]))
